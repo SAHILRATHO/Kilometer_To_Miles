@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Kilometers To Miles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1> Kilometers To Miles Converter</h1>
+
+        <div class="text">
+            <label for="v1"> Enter Distance In Kilometers:</label>
+            <input type="number" id="v1"><br> <br>
+            
+        </div>
+
+        <div class="btn">
+            <input type="button" id="enter" value="Convert to Miles" onclick="calculateArea()">
+
+        </div>
+        <div class="text">
+            <p id="sum"></p>
+        </div>
+    </div>
+    <script>
+        function calculateArea() {
+            var num1 = parseFloat(document.getElementById("v1").value)
+            var num2=0.621371 //1 kilometer is approximately 0.621371 miles
+
+            if (!isNaN(num1)) {
+                var cont = num1*num2
+                document.getElementById("sum").innerHTML = `${num1} Kilometers Is Approximately ${cont} Miles`
+            }
+            else {
+                document.getElementById("sum").innerText = "Plase enter a valid number"
+            }
+        }
+
+    </script>
+</body>
+</html>
